@@ -29,7 +29,7 @@ export default class NumberQuestion implements BlockTool {
   }: {
     api: API;
     config?: ToolConfig;
-    data?: NumberQuestionData;
+    data?: NumberQuestionSliderData;
   }) {
     this.wrapper = undefined;
     this.settings = [
@@ -120,7 +120,7 @@ export default class NumberQuestion implements BlockTool {
           type="range" min="0" max="100" value={this.data.defaultValue} step="1"
           className="block w-full max-w-sm mt-1 text-sm text-gray-400 h-6 cursor-pointer"
         />
-        <span class="mt-1 text-center">{this.data.value}</span>
+        <span className="mt-1 text-center">{this.data.value}</span>
         <input
           type="text"
           id="help-text"
